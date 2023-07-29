@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import styled from 'styled-components';
+import { Circle } from './Circle';
+import { Header } from './components/Header';
 
-function App() {
+const AppWrapper = styled.div`
+    max-width: 1140px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+`
+
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+        <AppWrapper>
+            <Header/>
+            
+        </AppWrapper>
+    </main>
   );
 }
 
-export default App;
+
