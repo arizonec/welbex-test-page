@@ -1,7 +1,7 @@
 import './App.scss';
 import styled from 'styled-components';
-import { Circle } from './Circle';
 import { Header } from './components/Header';
+import { Main } from './components/Main';
 
 const AppWrapper = styled.div`
     max-width: 1140px;
@@ -15,7 +15,7 @@ export function App() {
     <main>
         <AppWrapper>
             <Header/>
-            
+            <Main/>
         </AppWrapper>
     </main>
   );
