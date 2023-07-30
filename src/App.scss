@@ -1,6 +1,10 @@
 main {
-    padding: 46px 0;
-    width: 100vw;
-    height: 100vh;
+    padding: 46px 0 0 0;
+    max-width: 1440px;
+    min-height: 980px;
     background-color: var(--background);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }

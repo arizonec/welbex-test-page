@@ -2,6 +2,7 @@ import './App.scss';
 import styled from 'styled-components';
 import { Header } from './components/Header';
 import { Main } from './components/Main';
+import { Footer } from './components/Footer';
 
 const AppWrapper = styled.div`
     max-width: 1140px;
@@ -16,6 +17,7 @@ export function App() {
         <AppWrapper>
             <Header/>
             <Main/>
+            <Footer/>
         </AppWrapper>
     </main>
   );

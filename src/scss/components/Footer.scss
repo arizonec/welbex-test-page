@@ -1,0 +1,93 @@
+.footer {
+    display: flex;
+    height: 315px;
+    width: 100%;
+    padding-top: 55px;
+    color: var(--light-text);
+    font-family: var(--fontInter);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+
+    h2 {
+        text-transform: uppercase;
+        color: var(--dark-gray);
+        font-family: var(--fontInter);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16.94px;
+        letter-spacing: 0.7px;
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: var(--light-text);
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.footer__about {
+    max-width: 200px;
+    height: 100%;
+    margin-right: 98px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.footer__menu {
+    text-align: left;
+    margin-right: 163px;
+    white-space: nowrap;
+}
+
+.footer__contacts {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.footer__columns {
+    display: flex;
+
+    .firstColumns {
+        margin-right: 52px;
+    }
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+    div {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+    }
+
+    :nth-child(1) {
+        background: url('../../images/telegram.png') no-repeat;
+    }
+    :nth-child(2) {
+        background: url('../../images/viber.png');
+    }
+    :nth-child(3) {
+        background: url('../../images/whatsapp.png');
+        margin-right: 0;
+    }
+}
+
+.footer__phone {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.footer__adress {
+    margin-bottom: 70px;
+}
+
+.footer__license {
+    font-family: var(--fontMontserrat);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.63px;
+}
