@@ -1,3 +1,5 @@
+@use '../util/' as *;
+
 .footer {
     display: flex;
     height: 315px;
@@ -9,6 +11,13 @@
     font-size: 16px;
     line-height: 19.36px;
 
+    @include breakpoint-down(small) {
+        flex-direction: column;
+        line-height: 14.52px;
+        letter-spacing: 0.7px;
+        padding-top: 0;
+    }
+
     h2 {
         text-transform: uppercase;
         color: var(--dark-gray);
@@ -18,12 +27,22 @@
         line-height: 16.94px;
         letter-spacing: 0.7px;
         margin-bottom: 20px;
+
+        @include breakpoint-down(small) {
+            font-size: 12px;
+            padding-top: 0;
+        }
     }
 
     a {
         color: var(--light-text);
         display: block;
         margin-bottom: 10px;
+
+        @include breakpoint-down(small) {
+            font-size: 14px;
+            line-height: 16.94px;
+        }
     }
 }
 
@@ -33,17 +52,27 @@
     margin-right: 98px;
     text-align: left;
     white-space: nowrap;
+    margin-bottom: 20px;
 }
 
 .footer__menu {
     text-align: left;
     margin-right: 163px;
     white-space: nowrap;
+
+    @include breakpoint-down(small) {
+        margin-bottom: 20px;
+    }
 }
 
 .footer__contacts {
     text-align: right;
     white-space: nowrap;
+
+    @include breakpoint-down(small) {
+        justify-content: start;
+        text-align: left;
+    }
 }
 
 .footer__columns {
@@ -51,17 +80,65 @@
 
     .firstColumns {
         margin-right: 52px;
+
+        :nth-child(5) {
+            white-space: nowrap;
+        }
+
+        @include breakpoint-down(small) {
+            margin-right: 48px;
+            white-space: normal;
+        }
     }
+
+    .secondColumns {
+        
+        :nth-child(1) {
+            display: none;
+        }
+
+        :nth-child(4) {
+            white-space: nowrap;
+        }
+        
+        :nth-child(5) {
+            white-space: nowrap;
+        }
+
+        @include breakpoint-down(small) {
+            white-space: normal;
+            :nth-child(3) {
+                display: none;
+            }
+
+            :nth-child(1) {
+                display: block;
+            }
+            
+        }
+    }
+    
 }
 
 .footer__icons {
     display: flex;
     justify-content: end;
     margin-bottom: 20px;
+
+    @include breakpoint-down(small) {
+        justify-content: start;
+        margin-bottom: 10px;
+    }
+
     div {
         width: 20px;
         height: 20px;
         margin-left: 10px;
+
+        @include breakpoint-down(small) {
+            margin-left: 0;
+            margin-right: 10px;
+        }
     }
 
     :nth-child(1) {
@@ -79,10 +156,27 @@
 .footer__phone {
     margin-bottom: 20px;
     font-weight: 500;
+    line-height: 19.36px;
+
+    @include breakpoint-down(small) {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
 }
 
 .footer__adress {
     margin-bottom: 70px;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 19.36px;
+
+    @include breakpoint-down(small) {
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400px;
+        line-height: 16.94px;
+        margin-bottom: 50px;
+    }
 }
 
 .footer__license {
@@ -90,4 +184,13 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 14.63px;
+    
+    span {
+        text-decoration: underline;
+    };
+
+    @include breakpoint-down(small) {
+        display: block;
+        text-align: left;
+    }
 }

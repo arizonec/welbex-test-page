@@ -26,6 +26,12 @@ export function Main() {
                     <h3>35 дней</h3>
                         <p>использования CRM</p>
                     </div>
+                    <div className='grid5'>
+                    <h3>30 виджетов</h3>
+                    </div>
+                    <div className='grid6'>
+                    <h3>месяц AMOCRM</h3>
+                    </div>
                 </div>
                 <button className='btn' type='submit'>
                     Получить консультацию

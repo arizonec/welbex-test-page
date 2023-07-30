@@ -1,3 +1,5 @@
+@use './scss/util/' as *;
+
 main {
     padding: 46px 0 0 0;
     max-width: 1440px;
@@ -8,4 +10,15 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
+
+    @include breakpoint-down(medium) {
+        padding: 0 40px;
+     }
+
+     @include breakpoint-down(small) {
+        max-width: 320px;
+        min-height: 1115px;
+        height: 100%;
+        padding: 0 14px;
+     }
 }

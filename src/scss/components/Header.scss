@@ -1,15 +1,21 @@
+@use '../util/' as *;
+
 .header {
     display: flex;
     width: 100%;
     color: white;
     margin-bottom: 90px;
 }
-
 .logo {
     max-width: 140px;
     font-family: var(--fontMontserrat);
     margin-right: 52px;
     padding: 11px 0 0 0;
+    display: block;
+
+    @include breakpoint-down(small) {
+        display: none;
+    }
 }
 .logo__img {
     display: flex;
@@ -51,10 +57,20 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 19.36px;
+
+        @include breakpoint-down(small) {
+            font-size: 12px;
+            margin-right: 16px;
+        }
     }
 
     :last-child {
         margin-right: 0;
+        display: inline;
+
+        @include breakpoint-down(small) {
+            display: none;
+        }
     }
 }
 
@@ -66,6 +82,10 @@
     color: var(--light-text);
     line-height: 19.36px;
     display: flex;
+
+    @include breakpoint-down(small) {
+        display: none;
+    }
 }
 
 .phone {

@@ -1,12 +1,20 @@
+@use '../util/' as *;
+
 .main { 
-    display: flex;
     flex: 1 1 auto;
+    display: flex;
     flex-direction: row;
     color: white;
     width: 100%;
     height: 100%;
     padding: 0;
     margin-bottom: 69px;
+
+    @include breakpoint-down(small) {
+        flex-direction: column;
+        padding: 0 0 59px 0;
+        margin-bottom: 0;
+    }
 }
 
 .main__about {
@@ -21,6 +29,11 @@
         font-weight: 400;
         line-height: 58.09px;
         margin-bottom: 30px;
+
+        @include breakpoint-down(small) {
+            font-size: 36px;
+            line-height: 43.57px;
+        }
     }
 
     h1 span {
@@ -29,6 +42,11 @@
         background-clip: text;
         font-weight: 900;
         background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+
+        @include breakpoint-down(small) {
+            font-size: 36px;
+            line-height: 43.57px;
+        }
     }
 
     h3 {
@@ -38,6 +56,10 @@
         font-family: var(--fontMontserrat);
         line-height: 21.94px;
         color: var(--ligth-text);
+
+        @include breakpoint-down(small) {
+            margin-bottom: 45px;
+        }
     }
 }
 
@@ -47,6 +69,11 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+
+    @include breakpoint-down(small) {
+        text-align: left;
+        align-items: start;
+    }
 }
 
 .promo__title {
@@ -58,6 +85,13 @@
     line-height: 21.78px;
     max-width: 291px;
     margin: 15px 0 40px 0;
+    
+    @include breakpoint-down(small) {
+        text-align: left;
+        align-items: start;
+        margin: 0 0 20px 0;
+    }
+
 
     span {
         background: linear-gradient(to right, rgba(252, 176, 69, 1) 1%,rgba(253, 29, 29, 1) 43%,rgba(240,166,84,1) 44%,rgba(231,108,54,1) 100%);
@@ -66,6 +100,10 @@
         text-transform: uppercase;
         font-weight: 700;
         letter-spacing: 0.9px;
+
+        @include breakpoint-down(small) {
+            text-transform: lowercase;
+        }
     }
 }
 
@@ -77,7 +115,39 @@
     gap: 30px;
     font-family: var(--fontInter);
 
+    .grid5 {
+        display: none;
+    }
+
+    .grid6 {
+        display: none;
+    }
+
+    @include breakpoint-down(small) {
+        gap: 14px 10px;
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 16px 16px;
+        margin-bottom: 0;
+
+        .grid1 {
+            display: none;
+        }
+        
+        .grid4 {
+            display: none;
+        }
+
+        .grid5 {
+            display: block;
+        }
+    
+        .grid6 {
+            display: block;
+        }
+    }
+
     h3 {
+        display: inline-block;
         text-transform: uppercase;
         letter-spacing: 0.9px;
         font-size: 18px;
@@ -86,6 +156,34 @@
         text-align: right;
         line-height: 21.78px;
         margin-bottom: 6px;
+        position: relative;
+
+        &:before {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            content: '';
+            width: 10px;
+            height: 1px;
+            background: linear-gradient(to right, rgba(252, 176, 69, 1), rgba(253, 29, 29, 1));
+            
+        }
+
+        @include breakpoint-down(small) {
+            line-height: 15.85px;
+            font-size: 13px;
+            font-weight: 400;
+            font-family: var(--fontMontserrat);
+            letter-spacing: 0.7px;
+            padding: 0 0 0 15px;
+
+            &:before {
+                display: block;
+            }
+        }
+        }
     }
 
     p {
@@ -95,6 +193,9 @@
         text-align: right;
         line-height: 19.5px;
         color: var(--ligth-text);
+
+        @include breakpoint-down(small) {
+            display: none;
     }
 }
 
@@ -112,4 +213,8 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 19.36px;
+
+    @include breakpoint-down(small) {
+        display: none;
+    }
 }

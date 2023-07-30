@@ -21,6 +21,7 @@ export function Footer() {
                     <a href="">Наши клиенты</a>
                 </div>
                 <div className='secondColumns'>
+                    <a href="">Благодарность клиентов</a>
                     <a href="">Кейсы</a>
                     <a href="">Благодарственные письма</a>
                     <a href="">Сертификаты</a>
@@ -38,7 +39,7 @@ export function Footer() {
                 <div></div>
             </div>
             <div className='footer__adress'>Москва, Путевой проезд 3с1, к 902</div>
-            <p className='footer__license'>©WELBEX 2022. Все права защищены. <br/> Политика конфиденциальности</p>
+            <p className='footer__license'>©WELBEX 2022. Все права защищены. <br/> <span>Политика конфиденциальности</span></p>
            </div>
         </div>
     )
