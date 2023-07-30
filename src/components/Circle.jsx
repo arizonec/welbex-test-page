@@ -11,6 +11,10 @@ const StyledCircle = styled.div`
     border-radius: ${props => props.border};
     filter: ${props => props.filter};
     opacity: ${props => props.opacity};
+
+    @media ${props => props.theme.media.phone} {
+        display: none;
+    }
 `
 
 export const Circle = (props) => {

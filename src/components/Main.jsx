@@ -23,14 +23,20 @@ export function Main() {
                         <p>отдела продаж и CRM системы</p>
                     </div>
                     <div className='grid4'>
-                    <h3>35 дней</h3>
+                        <h3>35 дней</h3>
                         <p>использования CRM</p>
                     </div>
-                    <div className='grid5'>
-                    <h3>30 виджетов</h3>
+                    <div className='grid11'>
+                        <h3>Skype аудит</h3>
                     </div>
-                    <div className='grid6'>
-                    <h3>месяц AMOCRM</h3>
+                    <div className='grid22'>
+                        <h3>30 виджетов</h3>
+                    </div>
+                    <div className='grid33'>
+                        <h3>dashboard</h3>
+                    </div>
+                    <div className='grid44'>
+                        <h3>месяц amocrm</h3>
                     </div>
                 </div>
                 <button className='btn' type='submit'>

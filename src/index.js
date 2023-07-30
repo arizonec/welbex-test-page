@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './scss/style.scss';
 import { App } from './App.js';
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 
 const Global = createGlobalStyle`
@@ -81,12 +81,20 @@ const Global = createGlobalStyle`
     }
 `
 
+const theme = {
+    media: {
+        phone: "(max-width: 20em)"
+    }
+}
+
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
   <React.StrictMode>
+    <ThemeProvider theme={theme}> 
         <Global/>
         <App />
+    </ThemeProvider>
   </React.StrictMode>,
 );

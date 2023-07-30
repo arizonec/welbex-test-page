@@ -5,6 +5,12 @@
     width: 100%;
     color: white;
     margin-bottom: 90px;
+    padding: 0 14px;
+
+    @include breakpoint-down(small) {
+        min-height: 53px;
+        margin-bottom: 0;
+    }
 }
 .logo {
     max-width: 140px;
@@ -47,6 +53,14 @@
     font-family: var(--fontInter);
     padding: 15px 0 0 0;
     margin-right: 137px;
+
+    @include breakpoint-down(small) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+    }
 }
 
 .nav{
@@ -59,7 +73,7 @@
         line-height: 19.36px;
 
         @include breakpoint-down(small) {
-            font-size: 12px;
+            font-size: 14px;
             margin-right: 16px;
         }
     }
