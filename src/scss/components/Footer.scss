@@ -10,13 +10,13 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19.36px;
-    padding: 0 14px;
+    padding: 0;
 
     @include breakpoint-down(small) {
         flex-direction: column;
         line-height: 14.52px;
         letter-spacing: 0.7px;
-        padding-top: 45px;
+        padding: 45px 14px 0 14px;
     }
 
     h2 {
@@ -185,6 +185,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 14.63px;
+    line-height: 20px;
     
     span {
         text-decoration: underline;

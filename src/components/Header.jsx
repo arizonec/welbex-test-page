@@ -13,7 +13,7 @@ export function Header () {
             <nav className='nav'>
                 <a href="#">Услуги</a>
                 <a href="#">Виджеты</a>
-                <a href="#">Интеграция</a>
+                <a href="#">Интеграции</a>
                 <a href="#">Кейсы</a>
                 <a href="#">Сертификаты</a>
             </nav>
